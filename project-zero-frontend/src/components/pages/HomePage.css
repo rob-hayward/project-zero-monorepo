@@ -1,0 +1,78 @@
+.home-page {
+    background-image: url('../../images/projectZeroHome.png');
+    background-size: cover;
+    background-position: calc(50% - 20px) center; /* Shifted 20px to the left to centre image*/
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .home-page h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5vw; /* Responsive font size */
+    font-weight: 900; 
+    position: absolute;
+    top: 33vh; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+  
+  .content-wrapper {
+    position: absolute;
+    bottom: 10vh; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .home-page h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.7vw; /* Responsive font size */
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 5vh; /* Adjust as needed */
+  }
+  
+  .enter-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2vw; /* Responsive font size */
+    font-weight: 900;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .enter-button:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+  
+  .enter-button:focus {
+    outline: none;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .home-page h1 {
+      font-size: 8vw;
+    }
+  
+    .home-page h2 {
+      font-size: 3vw;
+    }
+  
+    .enter-button {
+      font-size: 3vw;
+    }
+  }
