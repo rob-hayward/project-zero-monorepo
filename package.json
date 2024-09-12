@@ -1,0 +1,20 @@
+{
+  "name": "project-zero-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "project-zero-frontend",
+    "project-zero-backend",
+    "projectZeroAI"
+  ],
+  "scripts": {
+    "start:frontend": "yarn workspace project-zero-frontend start",
+    "start:backend": "yarn workspace project-zero-backend start",
+    "start:ai": "cd projectZeroAI && uvicorn main:app --reload",
+    "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\" \"yarn start:ai\"",
+    "install:all": "yarn install && cd projectZeroAI && pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
