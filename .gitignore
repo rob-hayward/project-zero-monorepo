@@ -168,5 +168,16 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Lock files
+package-lock.json
+yarn.lock
+
+# Build output
+/project-zero-frontend/build/
+/project-zero-backend/dist/
+
+# Local environment files
+.env*.local
+
 # Specific to your project (if needed)
 # Add any project-specific ignores here

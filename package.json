@@ -4,15 +4,16 @@
   "private": true,
   "workspaces": [
     "project-zero-frontend",
-    "project-zero-backend",
-    "projectZeroAI"
+    "project-zero-backend"
   ],
   "scripts": {
-    "start:frontend": "yarn workspace project-zero-frontend start",
-    "start:backend": "yarn workspace project-zero-backend start",
+    "start:frontend": "npm run start --workspace=project-zero-frontend",
+    "start:backend": "npm run start --workspace=project-zero-backend",
     "start:ai": "cd projectZeroAI && uvicorn main:app --reload",
-    "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\" \"yarn start:ai\"",
-    "install:all": "yarn install && cd projectZeroAI && pip install -r requirements.txt"
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\" \"npm run start:ai\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "install:all": "npm install && cd projectZeroAI && pip install -r requirements.txt"
   },
   "devDependencies": {
     "concurrently": "^6.2.0"
